@@ -1,13 +1,59 @@
 function TaskDoneList() {
-  return(
-    <div>
-      <h2>Tasks done (2)</h2>
-      <ul>
-        <li>task done 1</li>
-        <li>task done 2</li>
+  return (
+    <section className="flex flex-col mb-10 w-150 mx-auto">
+      <h2 className="text-2xl">Tasks Done (3)</h2>
+      <ul className="overflow-y-auto shadow-xl px-3 py-1 rounded-lg mt-5 h-88">
+        <li className="shadow-xl flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl">
+          <div>Go to the market </div> <div>02/03/2025</div>{" "}
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
+        <li className="shadow-xl flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl">
+          <div>Go to the market </div> <div>02/03/2025</div>
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
+        <li className="flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl shadow-xl">
+          <div>Go to the market </div> <div>02/03/2025</div>
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
+        <li className="flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl shadow-xl">
+          <div>Go to the market </div> <div>02/03/2025</div>
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
+        <li className="flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl shadow-xl">
+          <div>Go to the market </div> <div>02/03/2025</div>
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
+        <li className="flex w-full justify-between items-center my-3 bg-gray-400 text-white p-5 rounded-2xl shadow-xl">
+          <div>Go to the market </div> <div>02/03/2025</div>
+          <div className="flex w-1/4 justify-end">
+            <button className="bg-red-500 px-2 py-1 text-white rounded-lg  shadow-xl cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </li>
       </ul>
-    </div>
+    </section>
   );
 }
 
-export default TaskDoneList
+export default TaskDoneList;
