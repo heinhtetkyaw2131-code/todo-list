@@ -32,8 +32,8 @@ function TodoList() {
 
   return (
     <section className="flex flex-col mb-10 w-150 mx-auto">
-      <h2 className="text-2xl">Tasks to do (3)</h2>
-      <ul className="overflow-y-auto shadow-xl px-3 py-1 rounded-lg mt-5 h-88">
+      <h2 className="text-2xl">Tasks to do ({todoList.length})</h2>
+      <ul className="overflow-y-auto shadow-xl px-3 py-1 rounded-lg mt-5 max-h-88">
         {todoList.map((item) => {
           return <ListItem item={item} todoList={todoList} setTodoList={setTodoList} key={item.key} name={item.name} dueDate={item.dueDate} />
         })}
