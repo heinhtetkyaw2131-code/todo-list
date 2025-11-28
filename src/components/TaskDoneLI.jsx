@@ -4,7 +4,7 @@ function TaskDoneLI({ setTasksDone, tasksDone, item }) {
   const deleteItem = () => {
     const newArr = tasksDone.filter((obj) => obj.key !== item.key);
     setTasksDone(newArr);
-    storeData('tasksDone', tasksDone);
+    storeData('tasksDone', newArr);
   };
 
   const name = item.name;

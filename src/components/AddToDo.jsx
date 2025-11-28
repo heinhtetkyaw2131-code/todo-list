@@ -6,15 +6,19 @@ function AddToDo({ setTodoList, todoList }) {
   const [inputDate, setInputDate] = useState("");
 
   const addTodo = () => {
-    console.log("add");
-    setTodoList((prevItems) => {
-      return [
-        ...prevItems,
-        { name: inputName, dueDate: inputDate, key: crypto.randomUUID() },
-      ];
-    });
+    if (inputName === "" || inputDate === "") {
+      alert("Please fill out both fields.");
+      return;
+    }
 
-    storeData("todoList", todoList);
+    const newArr = [
+      ...todoList,
+      { name: inputName, dueDate: inputDate, key: crypto.randomUUID() },
+    ];
+    newArr.reverse();
+    setTodoList(newArr);
+
+    storeData("todoList", newArr);
 
     setInputDate("");
     setInputName("");

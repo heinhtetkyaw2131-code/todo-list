@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import {storeData} from './utils/handleData';
 
 function ListItem({ tasksDone, setTodoList, item, todoList, setTasksDone }) {
@@ -6,16 +7,17 @@ function ListItem({ tasksDone, setTodoList, item, todoList, setTasksDone }) {
   const deleteItem = () => {
     const newArr = todoList.filter((obj) => obj.key !== id);
     setTodoList(newArr);
-    storeData('todoList', todoList);
+    storeData('todoList', newArr);
   };
 
   const finishTask = () => {
     const taskDone = todoList.filter((obj) => obj.key === id);
-    console.log(taskDone);
-    setTasksDone((prevTasks) => {
-      return [...prevTasks, taskDone[0]];
-    });
-    storeData('tasksDone', tasksDone);
+    console.log(taskDone[0].dueDate);
+    taskDone[0].dueDate = dayjs().format('DD/MM/YYYY');
+    const newArr = [...tasksDone, taskDone[0]];
+    newArr.reverse()
+    setTasksDone(newArr);
+    storeData('tasksDone', newArr);
     deleteItem();
   };
 
