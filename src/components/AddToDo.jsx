@@ -48,7 +48,7 @@ function AddToDo({ setTodoList, todoList }) {
       />
       <button
         onClick={addTodo}
-        className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 active:scale-95 text-white font-medium px-8 py-3 rounded-lg shadow-xl transition"
+        className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 active:scale-95 text-white font-medium px-8 py-3 rounded-lg shadow-xl transition k"
       >
         Add To Do
       </button>
